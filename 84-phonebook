@@ -3,7 +3,6 @@ public Map<String, String> phonebook(List<Contact> contacts) {
   for(Contact con: contacts){
       
       if(contact.phone != NULL){   
-          if(phonebook1.contains(contact.name)==NULL)
         phonebook1.put(con.name, con.phone);
       }
 
