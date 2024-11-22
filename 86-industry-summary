@@ -3,10 +3,12 @@ public Map<String, Decimal> industrySummary(List<Account> accounts) {
     Map<String, Decimal> mpp = new Map<String, Decimal>();
     for(Account ac: accounts){
         if(mpp.containsKey(ac.Industry)){
-            mpp.get(ac.Industry) = ac.AnnualRevenue + mpp.get(ac.Industry) ; 
+            Decimal value = ac.AnnualRevenue;
+            mpp.get(ac.Industry) = value + mpp.get(ac.Industry) ; 
         }
         else{
             mpp.put(ac.Industry, ac.AnnualRevenue);
         }
     }
+    return mpp;
 }
